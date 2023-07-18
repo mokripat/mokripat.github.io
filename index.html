@@ -8,20 +8,57 @@
 
 <body>
     <div class="page-container">
-        <div class="container">
+        <div class="container" id="contentContainer">
             <div class="text-content">
-                <h1>Hello World, it's me Patrick</h1>
-                <h3>Software engineering student</h2>
-                    <p>I like to poop, sometimes a lot, sometimes just a fart. I like to eat, mainly vietnamese cousine,
-                        pizza and pasta. I like to work out. I am very sad, that currently I am not able to :( Sadness
-                        bro</p>
+                <h1 id="introduction_title">Hello World, it's me Patrick</h1>
+                <h3 id="introduction_subtitle">Software engineering student</h2>
+                <p id="introduction_text">I like to poop, sometimes a lot, sometimes just a fart. I like to eat, mainly vietnamese cousine, pizza and pasta. I like to work out. I am very sad, that currently I am not able to :( Sadness bro</p>
             </div>
 
             <div class="image-content">
-                <img src="./profile.jpg" alt="Large Image" class="image-medium">
+                <img id="profilePhoto" src="./profile.jpg" alt="Introduction image" class="image-medium"
+                    onclick="swapImage('profilePhoto')">
             </div>
         </div>
     </div>
+
+    <script>
+        var who = "patrik"
+        var patrik_src = "./profile.jpg";
+        var patrik_title = "Hello World, it's me Patrick";
+        var patrik_subtitle = "Software engineering student";
+        var patrik_text = "I like to poop, sometimes a lot, sometimes just a fart. I like to eat, mainly vietnamese cousine, pizza and pasta. I like to work out. I am very sad, that currently I am not able to :( Sadness bro";
+
+        var denis_src = "./denis.jpeg";
+        var denis_title = "And this is Denis";
+        var denis_subtitle = "A big doo doo fart";
+        var denis_text = "He is one of the most weird humans I have ever encountered. His hobbby is following young girls and watch anime with them. His superpower is being on toilet everytime I text him. Such a cool trait.";
+
+        function swapImage(imageId) {
+            console.log("click")
+            var imageElement = document.getElementById(imageId);
+            var titleElement = document.getElementById("introduction_title");
+            var subtitleElement = document.getElementById("introduction_subtitle");
+            var textElement = document.getElementById("introduction_text");
+
+            if(who == "patrik") {
+                who = "denis";
+                console.log("swap to Denis")
+                imageElement.src = denis_src;
+                titleElement.innerHTML = denis_title;
+                subtitleElement.innerHTML = denis_subtitle;
+                textElement.innerHTML = denis_text;
+            } else {
+                who = "patrik";
+                console.log(imageElement.src)
+                console.log("swap to Patrik")
+                imageElement.src = patrik_src;
+                titleElement.innerHTML = patrik_title;
+                subtitleElement.innerHTML = patrik_subtitle;
+                textElement.innerHTML = patrik_text;
+            }
+        }
+    </script>
 </body>
 
 </html>

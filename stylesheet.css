@@ -11,18 +11,6 @@ body {
     height: auto;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
-    padding: 20px;
-}
-
-.text-content {
-    flex: 1;
-    padding-right: 20px;
-}
-
 h1 {
     font-size: 32px;
     margin-bottom: 10px;
@@ -40,8 +28,17 @@ p {
 
 .image-content {
     flex: 1;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.container {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    max-width: 1000px;
 }
 
 .page-container {
