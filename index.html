@@ -34,6 +34,11 @@
         var denis_subtitle = "A big doo doo fart";
         var denis_text = "He is one of the most weird humans I have ever encountered. His hobbby is following young girls and watch anime with them. His superpower is being on toilet everytime I text him. Such a cool trait.";
 
+        var jara_src = "./jara.jpg";
+        var jara_title = "Last but not least, Jaroslav";
+        var jara_subtitle = "To be soon next Dr. House";
+        var jara_text = "Brain power house dude, nonstop bragging about local politics. He drinks lot of wine and likes to enhance cups of his female co-drinkers with substances he stole from the school. You dont want to piss him off, he can get you fast on his scooter.";
+
         function swapImage(imageId) {
             console.log("click")
             var imageElement = document.getElementById(imageId);
@@ -41,17 +46,20 @@
             var subtitleElement = document.getElementById("introduction_subtitle");
             var textElement = document.getElementById("introduction_text");
 
-            if(who == "patrik") {
+            if (who == "patrik") {
                 who = "denis";
-                console.log("swap to Denis")
                 imageElement.src = denis_src;
                 titleElement.innerHTML = denis_title;
                 subtitleElement.innerHTML = denis_subtitle;
                 textElement.innerHTML = denis_text;
+            } else if (who == "denis") {
+                who = "jara";
+                imageElement.src = jara_src;
+                titleElement.innerHTML = jara_title;
+                subtitleElement.innerHTML = jara_subtitle;
+                textElement.innerHTML = jara_text;
             } else {
                 who = "patrik";
-                console.log(imageElement.src)
-                console.log("swap to Patrik")
                 imageElement.src = patrik_src;
                 titleElement.innerHTML = patrik_title;
                 subtitleElement.innerHTML = patrik_subtitle;
